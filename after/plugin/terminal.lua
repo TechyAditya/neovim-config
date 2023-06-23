@@ -60,7 +60,7 @@ end
 function _GCC_TOGGLE()
     local path = vim.fn.expand("%:p:h")
     local pathlessFileName = vim.fn.expand("%:t:r")
-    local comm = string.format("cd \"%s\" && gcc \"%s.c\" -o \"%s\" && \"%s\"", path, pathlessFileName, pathlessFileName, pathlessFileName)
+    local comm = string.format("cd \"%s\" && gcc \"%s.c\" -o \"%s.out\" && \"%s.out\"", path, pathlessFileName, pathlessFileName, pathlessFileName)
     -- local comm = "gcc " .. pathlessFileName .. ".c -o " .. pathlessFileName .. " && ./" .. pathlessFileName
     print(comm)
     local terminal = Terminal:new({ cmd = comm, direction = "float", close_on_exit = false, hidden = true }) 
@@ -71,7 +71,7 @@ function _GPP_TOGGLE()
     local path = vim.fn.expand("%:p:h")
     local pathlessFileName = vim.fn.expand("%:t:r")
     -- local comm = "g++ " .. pathlessFileName .. ".cpp -o " .. pathlessFileName .. " && ./" .. pathlessFileName
-    local comm = string.format("cd \"%s\" && g++ \"%s.cpp\" -o \"%s\" && ./\"%s\"", path, pathlessFileName, pathlessFileName, pathlessFileName)
+    local comm = string.format("cd \"%s\" && g++ \"%s.cpp\" -o \"%s.out\" && ./\"%s.out\"", path, pathlessFileName, pathlessFileName, pathlessFileName)
     print(comm)
     local terminal = Terminal:new({ cmd = comm, direction = "float", close_on_exit = false, hidden = true }) 
     terminal:toggle()

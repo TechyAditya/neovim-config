@@ -1,138 +1,151 @@
 {
-	"Boilerplate code for C++": {
-		"prefix": [
-			"doc",
-			"!",
-			"code"
-		],
-		"body": [
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"int main()",
-			"{",
-			"\t$0",
-			"",
-			"\treturn 0;",
-			"}"
-		],
-		"description": "New C Program"
-	},
-	"Leetcode vec-void": {
-		"prefix": "lcv",
-		"body": [
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"",
-			"class Solution {",
-			"public:",
-			"    void ${1:fun}(vector<int>& ${2:arr}) {",
-			"        $0",
-			"    }",
-			"};",
-			"",
-			"int main() {",
-			"    Solution s;",
-			"    vector<int> ${2:arr} = {${3:2, 4, 5, 1, 3}};",
-			"    s.${1:fun}(${2:arr});",
-			"    for(auto i : ${2:arr}) {",
-			"        cout << i << \" \";",
-			"    }",
-			"cout << endl;",
-			"    return 0;",
-			"}"
-		],
-		"description": "Snippet to create a void function with vector as parameter"
-	},
-	"Leetcode vec-return": {
-		"prefix": "lcr",
-		"body": [
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"",
-			"class Solution {",
-			"public:",
-			"    ${3:int} ${1:fun}(vector<int>& ${2:arr}) {",
-			"        $0",
-			"    }",
-			"};",
-			"",
-			"int main() {",
-			"    Solution s;",
-			"    vector<int> ${2:arr} = {${4:2, 4, 5, 1, 3}};",
-			"    cout << s.${1:fun}(${2:arr}) << endl;",
-			"    return 0;",
-			"}"
-		],
-		"description": "Snippet to create a return function with vector as parameter"
-	},
-	"Leetcode num-return": {
-		"prefix": "lcnr",
-		"body": [
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"",
-			"class Solution {",
-			"public:",
-			"    ${3:int} ${1:fun}(${3:int}& ${2:num}) {",
-			"        $0",
-			"    }",
-			"};",
-			"",
-			"int main() {",
-			"    Solution s;",
-			"    ${3:int} ${2:num} = ${4:69};",
-			"    cout << s.${1:fun}(${2:num}) << endl;",
-			"    return 0;",
-			"}"
-		],
-		"description": "Snippet to create a return function with number as parameter"
-	},
-	"Leetcode num-void": {
-		"prefix": "lcnv",
-		"body": [
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"",
-			"class Solution {",
-			"public:",
-			"    void ${1:fun}(${3:int}& ${2:num}) {",
-			"        $0",
-			"    }",
-			"};",
-			"",
-			"int main() {",
-			"    Solution s;",
-			"    ${3:int} ${2:num} = ${4:69};",
-			"    s.${1:fun}(${2:num});",
-			"    cout << ${2:num} << endl;",
-			"    return 0;",
-			"}"
-		],
-		"description": "Snippet to create a void function with number as parameter"
-	},
-	"Leetcode vec-vec": {
-		"prefix": "lcvv",
-		"body": [
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"",
-			"class Solution {",
-			"public:",
-			"    vector<int> ${1:fun}(vector<int>& ${2:arr}) {",
-			"        $0",
-			"    }",
-			"};",
-			"",
-			"int main() {",
-			"    Solution s;",
-			"    vector<int> ${2:arr} = {${4:2, 4, 5, 1, 3}};",
-			"    ${2:arr} = s.${1:fun}(${2:arr});",
-			"    for(auto i : ${2:arr}) {",
-			"        cout << i << \" \";",
-			"    }",
-			"    return 0;",
-			"}"
-		],
-		"description": "Snippet to create a vector function with vector as parameter"
-	}
+    "Boilerplate code for C++": {
+        "prefix": [
+            "doc",
+            "!",
+            "code"
+        ],
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "int main()",
+            "{",
+            "\t$0",
+            "",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "New C Program"
+    },
+    "Leetcode vec-void": {
+        "prefix": "lcv",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "class Solution {",
+            "public:",
+            "  void ${1:fun}(vector<int>& ${2:arr}) {",
+            "    $0",
+            "  }",
+            "};",
+            "",
+            "int main() {",
+            "  Solution s;",
+            "  vector<int> ${2:arr} = {${3:2, 4, 5, 1, 3}};",
+            "  s.${1:fun}(${2:arr});",
+            "  for (auto i : ${2:arr}) {",
+            "    cout << i << \" \";",
+            "  }",
+            "cout << endl;",
+            "  return 0;",
+            "}"
+        ],
+        "description": "Snippet to create a void function with vector as parameter"
+    },
+    "Leetcode vec-return": {
+        "prefix": "lcr",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "class Solution {",
+            "public:",
+            "  ${3:int} ${1:fun}(vector<int>& ${2:arr}) {",
+            "    $0",
+            "  }",
+            "};",
+            "",
+            "int main() {",
+            "  Solution s;",
+            "  vector<int> ${2:arr} = {${4:2, 4, 5, 1, 3}};",
+            "  cout << s.${1:fun}(${2:arr}) << endl;",
+            "  return 0;",
+            "}"
+        ],
+        "description": "Snippet to create a return function with vector as parameter"
+    },
+    "Leetcode num-return": {
+        "prefix": "lcnr",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "class Solution {",
+            "public:",
+            "  ${3:int} ${1:fun}(${3:int}& ${2:num}) {",
+            "    $0",
+            "  }",
+            "};",
+            "",
+            "int main() {",
+            "  Solution s;",
+            "  ${3:int} ${2:num} = ${4:69};",
+            "  cout << s.${1:fun}(${2:num}) << endl;",
+            "  return 0;",
+            "}"
+        ],
+        "description": "Snippet to create a return function with number as parameter"
+    },
+    "Leetcode num-void": {
+        "prefix": "lcnv",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "class Solution {",
+            "public:",
+            "  void ${1:fun}(${3:int}& ${2:num}) {",
+            "    $0",
+            "  }",
+            "};",
+            "",
+            "int main() {",
+            "  Solution s;",
+            "  ${3:int} ${2:num} = ${4:69};",
+            "  s.${1:fun}(${2:num});",
+            "  cout << ${2:num} << endl;",
+            "  return 0;",
+            "}"
+        ],
+        "description": "Snippet to create a void function with number as parameter"
+    },
+    "Leetcode vec-vec": {
+        "prefix": "lcvv",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "class Solution {",
+            "public:",
+            "  vector<int> ${1:fun}(vector<int>& ${2:arr}) {",
+            "    $0",
+            "  }",
+            "};",
+            "",
+            "int main() {",
+            "  Solution s;",
+            "  vector<int> ${2:arr} = {${4:2, 4, 5, 1, 3}};",
+            "  ${2:arr} = s.${1:fun}(${2:arr});",
+            "  for (auto i : ${2:arr}) {",
+            "    cout << i << \" \";",
+            "  }",
+            "  return 0;",
+            "}"
+        ],
+        "description": "Snippet to create a vector function with vector as parameter"
+    },
+    "2d for": {
+        "prefix": "2for",
+        "body": [
+            "  for (auto i : ${1:arr}) {", 
+            "    for (auto j : i)",
+            "      cout << j << ' ';",
+            "    }",
+            "    cout << endl;",
+            "  }",
+            "  $0"
+        ],
+        "description": "2d for loop snippet"
+    }
 }

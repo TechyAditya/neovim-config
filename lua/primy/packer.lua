@@ -5,7 +5,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
-    use 'ThePrimeagen/vim-be-good'
+	use 'ThePrimeagen/vim-be-good'
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.x',
@@ -54,8 +54,8 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	}
-    use 'github/copilot.vim'
-    use 'hrsh7th/vim-vsnip'
-    use 'hrsh7th/vim-vsnip-integ'
+	use 'github/copilot.vim'
+	use 'hrsh7th/vim-vsnip'
+	use 'hrsh7th/vim-vsnip-integ'
 	waifu()
 end)
