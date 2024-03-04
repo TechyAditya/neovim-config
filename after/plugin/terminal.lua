@@ -52,6 +52,8 @@ function _COMPILE()
         _GCC_TOGGLE()
     elseif fileExtension == "cpp" then
         _GPP_TOGGLE()
+    elseif fileExtension == "go" then
+        _GO_TOGGLE()
     else 
         print("No compiler found for this file type")
     end
@@ -72,6 +74,15 @@ function _GPP_TOGGLE()
     local pathlessFileName = vim.fn.expand("%:t:r")
     -- local comm = "g++ " .. pathlessFileName .. ".cpp -o " .. pathlessFileName .. " && ./" .. pathlessFileName
     local comm = string.format("cd \"%s\" && g++ \"%s.cpp\" -o \"%s.out\" && ./\"%s.out\"", path, pathlessFileName, pathlessFileName, pathlessFileName)
+    print(comm)
+    local terminal = Terminal:new({ cmd = comm, direction = "float", close_on_exit = false, hidden = true }) 
+    terminal:toggle()
+end
+
+function _GO_TOGGLE()
+    local path = vim.fn.expand("%:p:h")
+    -- local comm = "g++ " .. pathlessFileName .. ".cpp -o " .. pathlessFileName .. " && ./" .. pathlessFileName
+    local comm = string.format("cd \"%s\" && go run .", path, pathlessFileName, pathlessFileName, pathlessFileName)
     print(comm)
     local terminal = Terminal:new({ cmd = comm, direction = "float", close_on_exit = false, hidden = true }) 
     terminal:toggle()
