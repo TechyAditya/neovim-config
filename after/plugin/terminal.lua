@@ -38,11 +38,12 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
 
-local python = Terminal:new({ cmd = "python", hidden = true, direction = "float" })
+--local python = Terminal:new({ cmd = "python", hidden = true, direction = "float" })
 
-function _PYTHON_TOGGLE()
-    python:toggle()
-end
+--function _PYTHON_TOGGLE()
+--    python:toggle()
+--end
+
 
 function _COMPILE()
     local fileExtension = vim.fn.expand("%:e")
@@ -57,6 +58,15 @@ function _COMPILE()
     else 
         print("No compiler found for this file type")
     end
+end
+
+function _PYTHON_TOGGLE()
+    local path = vim.fn.expand("%:p:h")
+    local pathlessFileName = vim.fn.expand("%:t:r")
+    local comm = string.format("cd \"%s\" && python \"%s.py\"", path, pathlessFileName, pathlessFileName, pathlessFileName)
+    print(comm)
+    local terminal = Terminal:new({ cmd = comm, direction = "float", close_on_exit = false, hidden = true }) 
+    terminal:toggle()
 end
 
 function _GCC_TOGGLE()
