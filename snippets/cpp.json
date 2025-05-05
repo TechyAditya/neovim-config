@@ -43,6 +43,29 @@
         ],
         "description": "Snippet to create a void function with vector as parameter"
     },
+    "Leetcode vec-k-return": {
+        "prefix": "lckr",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "class Solution {",
+            "public:",
+            "  ${2:int} ${1:fun}(vector<int>& ${3:arr}, int ${4:k}) {",
+            "    $0",
+            "  }",
+            "};",
+            "",
+            "int main() {",
+            "  Solution s;",
+            "  int ${4:k} = ${6:2};",
+            "  vector<int> ${3:arr} = {${5:2, 4, 5, 1, 3}};",
+            "  cout << s.${1:fun}(${3:arr}, ${4:k}) << endl;",
+            "  return 0;",
+            "}"
+        ],
+        "description": "Snippet to create a return function with vector and k as parameter"
+    },
     "Leetcode vec-return": {
         "prefix": "lcr",
         "body": [
@@ -134,6 +157,51 @@
             "}"
         ],
         "description": "Snippet to create a vector function with vector as parameter"
+    },
+    "Leetcode str-num": {
+        "prefix": "lcsn",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "class Solution {",
+            "public:",
+            "  int ${1:fun} (string ${2:s}) {",
+            "    $0",
+            "  }",
+            "};",
+            "",
+            "int main() {",
+            "  Solution sol;",
+            "  string ${2:s} = \"${3:abcd}\";",
+            "  cout << sol.${1:fun}(${2:s});",
+            "  return 0;",
+            "}"
+        ],
+        "description": "Snippet to create a num function with string as parameter"
+    },
+    "Leetcode str-k-num": {
+        "prefix": "lcskn",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "class Solution {",
+            "public:",
+            "  int ${1:fun} (string ${2:s}, int ${3:k}) {",
+            "    $0",
+            "  }",
+            "};",
+            "",
+            "int main() {",
+            "  Solution sol;",
+            "  int ${3:k} = ${5:2};",
+            "  string ${2:s} = \"${4:abcd}\";",
+            "  cout << sol.${1:fun}(${2:s}, ${3:k});",
+            "  return 0;",
+            "}"
+        ],
+        "description": "Snippet to create a num function with string and k as parameter"
     },
     "2d for": {
         "prefix": "2for",

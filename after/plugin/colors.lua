@@ -11,14 +11,14 @@
 --]]
 function waifu(color)
 
-	color = color or "aurora"
+	color = color or "onedark"
 	vim.cmd.colorscheme(color)
 	vim.g.transparent_groups = vim.list_extend({}, { "EndOfBuffer" })
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })	
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
---	vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+	vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
 	vim.api.nvim_set_hl(0, "LineNrAbove", { bg = "none" })
 	vim.api.nvim_set_hl(0, "LineNrBelow", { bg = "none" })
 --	vim.api.nvim_command('redraw')

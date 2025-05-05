@@ -1,0 +1,16 @@
+{
+    "Boilerplate code for perl": {
+        "prefix": [
+            "doc",
+            "!",
+            "code"
+        ],
+        "body": [
+            "use strict;",
+            "use warnings;",
+            "",
+            "$0"
+        ],
+        "description": "New perl Program"
+    }
+}

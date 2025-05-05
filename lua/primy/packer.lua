@@ -13,10 +13,10 @@ return require('packer').startup(function(use)
 	}
 
 	use {
-		'ray-x/aurora',
-		as = 'aurora',
+		'ful1e5/onedark.nvim',
+		as = 'onedark',
 		config = function()
-			vim.cmd('colorscheme aurora')
+			vim.cmd('colorscheme onedark')
 		end
 	}
 

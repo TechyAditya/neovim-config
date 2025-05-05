@@ -1,8 +1,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>q", vim.cmd.quitall)
+vim.keymap.set("n", "<leader>Q", vim.cmd.cquit)
 vim.keymap.set("n", "<leader>w", vim.cmd.write)
-
+vim.keymap.set("n", "<leader>W", vim.cmd.wq)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 

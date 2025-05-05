@@ -11,7 +11,7 @@ v.expandtab = true
 v.smartindent = true
 v.swapfile = false
 v.backup = false
-v.undodir = "~/.vim/undodir"
+v.undodir = "/home/aditya/.vim/undodir"
 v.undofile = true
 
 v.hlsearch = false

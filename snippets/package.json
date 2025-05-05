@@ -4,6 +4,12 @@
         "snippets": [
             {
                 "language": [
+                    "pl"
+                ],
+                "path": "./perl.json"
+            },
+            {
+                "language": [
                     "cpp"
                 ],
                 "path": "./cpp.json"

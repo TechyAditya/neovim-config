@@ -79,12 +79,6 @@ _G.packer_plugins = {
     path = "/home/aditya/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  aurora = {
-    config = { "\27LJ\2\n6\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\23colorscheme aurora\bcmd\bvim\0" },
-    loaded = true,
-    path = "/home/aditya/.local/share/nvim/site/pack/packer/start/aurora",
-    url = "https://github.com/ray-x/aurora"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/aditya/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -155,6 +149,12 @@ _G.packer_plugins = {
     path = "/home/aditya/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  onedark = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme onedark\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/aditya/.local/share/nvim/site/pack/packer/start/onedark",
+    url = "https://github.com/ful1e5/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/aditya/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -213,10 +213,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: aurora
-time([[Config for aurora]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\23colorscheme aurora\bcmd\bvim\0", "config", "aurora")
-time([[Config for aurora]], false)
+-- Config for: onedark
+time([[Config for onedark]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme onedark\bcmd\bvim\0", "config", "onedark")
+time([[Config for onedark]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

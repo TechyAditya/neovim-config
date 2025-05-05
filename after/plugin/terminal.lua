@@ -23,6 +23,29 @@ toggleterm.setup({
     },
 })
 
+-- toggleterm.setup({
+--     size = 10,
+--     open_mapping = [[<C-|>]],
+--     hide_numbers = true,
+--     shade_filetypes = {},
+--     shade_terminals = true,
+--     shading_factor = 2,
+--     start_in_insert = true,
+--     insert_mappings = true,
+--     persist_size = true,
+--     direction =  "horizontal",
+--     close_on_exit = true,
+--     shell = vim.o.shell,
+--     float_opts = {
+--         border = "curved",
+--         winblend = 0,
+--         highlights = {
+--             border = "Normal",
+--             background = "Normal",
+--         },
+--     },
+-- })
+
 function _G.set_terminal_keymaps()
     local opts = {noremap = true}
     vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
@@ -53,6 +76,8 @@ function _COMPILE()
         _GCC_TOGGLE()
     elseif fileExtension == "cpp" then
         _GPP_TOGGLE()
+    elseif fileExtension == "pl" then
+        _PERL_TOGGLE()
     elseif fileExtension == "go" then
         _GO_TOGGLE()
     else 
@@ -69,10 +94,19 @@ function _PYTHON_TOGGLE()
     terminal:toggle()
 end
 
+function _PERL_TOGGLE()
+    local path = vim.fn.expand("%:p:h")
+    local pathlessFileName = vim.fn.expand("%:t:r")
+    local comm = string.format("cd \"%s\" && perl \"%s.pl\"", path, pathlessFileName, pathlessFileName, pathlessFileName)
+    print(comm)
+    local terminal = Terminal:new({ cmd = comm, direction = "float", close_on_exit = false, hidden = true }) 
+    terminal:toggle()
+end
+
 function _GCC_TOGGLE()
     local path = vim.fn.expand("%:p:h")
     local pathlessFileName = vim.fn.expand("%:t:r")
-    local comm = string.format("cd \"%s\" && gcc \"%s.c\" -o \"%s.out\" && \"%s.out\"", path, pathlessFileName, pathlessFileName, pathlessFileName)
+    local comm = string.format("cd \"%s\" && gcc \"%s.c\" -o a.out && ./a.out", path, pathlessFileName, pathlessFileName, pathlessFileName)
     -- local comm = "gcc " .. pathlessFileName .. ".c -o " .. pathlessFileName .. " && ./" .. pathlessFileName
     print(comm)
     local terminal = Terminal:new({ cmd = comm, direction = "float", close_on_exit = false, hidden = true }) 
@@ -83,7 +117,7 @@ function _GPP_TOGGLE()
     local path = vim.fn.expand("%:p:h")
     local pathlessFileName = vim.fn.expand("%:t:r")
     -- local comm = "g++ " .. pathlessFileName .. ".cpp -o " .. pathlessFileName .. " && ./" .. pathlessFileName
-    local comm = string.format("cd \"%s\" && g++ \"%s.cpp\" -o \"%s.out\" && ./\"%s.out\"", path, pathlessFileName, pathlessFileName, pathlessFileName)
+    local comm = string.format("cd \"%s\" && g++ \"%s.cpp\" -o a.out && ./a.out", path, pathlessFileName, pathlessFileName, pathlessFileName)
     print(comm)
     local terminal = Terminal:new({ cmd = comm, direction = "float", close_on_exit = false, hidden = true }) 
     terminal:toggle()
