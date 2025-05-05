@@ -5,8 +5,8 @@ git clone https://github.com/TechyAditya/neovim-config.git ~/.config/nvim
 
 ### Install nvim
 ```
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-tar -C ~/apps/ -xzf nvim-linux64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+tar -C ~/apps/ -xzf nvim-linux-x86_64.tar.gz
 ```
 
 ### Install Packer
@@ -18,8 +18,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ### Install Nodejs
 ```
-# Nodejs 21
-curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
+# Nodejs 22
+# https://deb.nodesource.com/
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 
 # Not confirmed dependency
@@ -29,6 +30,8 @@ sudo npm install -g estilo
 ```
 # C++
 sudo apt install build-essential gdb
+cd /usr/include/x86_64-linux-gnu/c++/13/bits/
+sudo g++ ./stdc++.h
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
