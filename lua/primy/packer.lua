@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 	}
 	use 'nvim-treesitter/playground'
 	-- use 'xiyaowong/transparent.nvim'
-	use 'theprimeagen/harpoon'  
+	use 'theprimeagen/harpoon'
 	use 'theprimeagen/refactoring.nvim'
 	use 'mbbill/undotree'
 	use 'tpope/vim-fugitive'
@@ -51,11 +51,12 @@ return require('packer').startup(function(use)
 
 			-- Snippets
 			{'L3MON4D3/LuaSnip'},
-			{'rafamadriz/friendly-snippets'},
+            { "rafamadriz/friendly-snippets" },
 		}
 	}
 	use 'github/copilot.vim'
 	use 'hrsh7th/vim-vsnip'
 	use 'hrsh7th/vim-vsnip-integ'
+    use "rafamadriz/friendly-snippets"
 	waifu()
 end)
